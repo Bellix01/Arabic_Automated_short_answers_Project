@@ -1,0 +1,104 @@
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    font-family: "Gill Sans", sans-serif;
+    overflow: hidden; /* Prevent horizontal scrollbar */
+  }
+  
+  .background-animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #F9F9F9, #D8C865, #A8A8A8); /* Updated gradient colors */
+    animation: gradientAnimation 10s linear infinite;
+    z-index: -1; /* Move the background behind the content */
+  }
+  
+  @keyframes gradientAnimation {
+    0% {
+      background-position: 100% 0;
+    }
+    100% {
+      background-position: 0 0;
+    }
+  }
+  
+  .app-container {
+    position: relative;
+    z-index: 1; /* Ensure content appears above the background animation */
+  }
+  
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .container {
+    max-width: 600px;
+    width: 100%;
+  }
+  
+  .card {
+    position: relative;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 16px;
+    text-align: right;
+    overflow: hidden;
+  }
+  
+  .card-number {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #1976d2;
+    color: #fff;
+    padding: 4px 8px;
+    border-radius: 4px;
+  }
+  
+  hr {
+    border: none;
+    height: 1px;
+    background-color: #ddd;
+    margin: 16px 0;
+  }
+  
+  .form-group {
+    margin-top: 16px;
+  }
+  
+  textarea {
+    width: 100%;
+    height: 100px;
+    resize: vertical;
+  }
+  
+  .btn-primary {
+    background-color: #1976d2;
+    color: #fff;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .btn-primary:hover {
+    background-color: #125699;
+  }
+    
+  .card h5 {
+    margin-top: 20px; /* Adjust the value as needed */
+  }
+  
+  h1.mb-4 {
+    text-align: center;
+  }
+
+  

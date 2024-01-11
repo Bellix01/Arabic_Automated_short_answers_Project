@@ -1,0 +1,37 @@
+<!-- quiz-page.component.html -->
+
+<div class="app-container background-animation">
+  <app-navbar></app-navbar>
+
+  <div class="content" role="main">
+    <div class="container mt-5">
+      <h1 class="mb-4">Quiz for Islamic education</h1>
+
+      <div *ngFor="let question of questions; let i = index" class="card" style="text-align: right;">
+        <div class="card-number">{{ i + 1 }}</div>
+        <h5>{{ question.title }}</h5>
+        <p>{{ question.description }}</p>
+
+        <form (submit)="submitAllAnswers()">
+          <div class="form-group">
+            <label for="answer{{ question.id }}">Your Answer:</label>
+            <textarea class="form-control" id="answer{{ question.id }}" name="answer{{ question.id }}" [(ngModel)]="question.answer" required></textarea>
+          </div>
+
+          <hr>
+        </form>
+        <div>Score: {{ question.score }}</div>
+      </div>
+
+      <div class="form-group" style="display: flex; justify-content: space-between;">
+        <!-- Use submitAllAnswers instead of submitAnswer -->
+        <button type="submit" class="btn btn-primary" (click)="submitAllAnswers()">Submit Answers</button>
+        
+      </div>
+
+      <div *ngIf="showResultSection">
+        <h3>Total Score: {{ totalScore }}</h3>
+      </div>
+    </div>
+  </div>
+</div>

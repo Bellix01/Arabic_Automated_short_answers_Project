@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Gill Sans", sans-serif;
+}
+
+
+body {
+    margin: 0;
+    overflow: hidden; /* Remove scroll */
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #000000;
+ 
+   
+}
+.hero {
+    width: 100%; /* Set to viewport width */
+    height: 100%;
+    background-image: linear-gradient(rgba(12, 3, 51, 0.6), rgba(12, 3, 51, 0.6));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero video {
+    width: 111.10%; 
+    max-width: 120%; 
+    height: auto; 
+    object-fit: cover;
+}
+
+/* Add the following CSS to hide the scrollbar on all browsers */
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.typing::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: #dceff9;
+    animation: cursorBlink 5s linear infinite; 
+}
+
+@keyframes cursorBlink {
+    0%, 100% {
+        left: 0;
+    }
+    30%, 60% {
+        left: 100%; /* Move the cursor to the right */
+    }
+}
+
+.typing h1 {
+    position: relative;
+    color: #eef8fc;
+    letter-spacing: 5px;
+    font-size: 2rem;
+    overflow: hidden;
+    margin-bottom: 0;
+    max-width: 700px;
+    white-space: nowrap;
+    animation: type 5s linear infinite; 
+}
+
+@keyframes type {
+    0%, 100% {
+        width: 0px;
+    }
+    30%, 60% {
+        width: 100%;
+    }
+}
+
+.typing {
+    position: relative;
+    margin-left: 30px;
+    /* -webkit-box-reflect: below 1px linear-gradient(transparent, #3333); */
+}
+
+    span{
+        color: #ffb300;
+    }
+
+  .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+  }
+
+  .content h1 {
+    font-size: 160px;
+    color: #fff;
+    font-weight: 600;
+    margin-top: -80px;
+  }
+
+  .content a {
+    text-decoration: none;
+    display: inline-block;
+    color: #fff;
+    font-size: 24px;
+    border: 2px solid #fff;
+    padding: 14px 70px;
+    border-radius: 50px;
+    margin-top: 20px;
+  }
+  
+    .hero {
+    width: 100%;
+    height: 100vh; /* Ensure the hero takes the full height of the viewport */
+    background-image: linear-gradient(rgba(12, 3, 51, 0.3), rgba(12, 3, 51, 0.3));
+    position: relative;
+    padding: 0 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+@media(max-width: 330px) {
+    .typing h4 {
+        font-size: 3rem;
+        animation: type 5s steps(10) infinite;
+    }
+
+    @keyframes type {
+
+        0%,
+        100% {
+            width: 0px;
+        }
+
+        30%,
+        60% {
+            width: 305px;
+        }
+    }
+
+}
