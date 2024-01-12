@@ -1,6 +1,6 @@
 # Arabic_Automated_short_answers_Project
 
-Description du Projet :
+# Description du Projet :
 
 --> Ce projet vise à créer un système automatisé de notation de courtes réponses en arabe et une assistance intelligente pour l'éducation islamique des élèves. L'objectif est d'attribuer une note appropriée aux étudiants en fonction de leurs réponses (notes de 0 à 20). Le système fonctionnera en arabe et inclura la préparation d'un ensemble de données à partir de diverses sources à l'aide de techniques de scraping.
 
